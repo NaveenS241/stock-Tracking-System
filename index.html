@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Boxicons -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+
+	<title>Fixer</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-package' ></i>
+			<span class="text">Fixer</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="index.html">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="arrival.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Arrival</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="departure.html">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Departure</span>
+				</a>
+			</li>
+			<li>
+				<a href="report.html">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Reports</span>
+				</a>
+			</li>
+
+		</ul>
+		<ul class="side-menu">
+
+			<li>
+				<a href="login.html" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				
+			</a>
+			<a href="#" class="profile">
+				<img src="img/people.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+			
+			</div>
+		
+			<ul class="box-info">
+				<li onclick="get()">
+					<i class='bx bxs-package' ></i>
+				
+					<span class="text">
+						
+						<p >RR nagar</p>
+						
+						<h3>560098</h3>
+						<p id="p1"></p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-package' ></i>
+					<span class="text">
+						
+						<p>Nayanda Halli</p>
+						<h3>560039</h3>
+						<p id="p2"></p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-package' ></i>
+					<span class="text">
+						
+						
+						<p>BU/Janabarathi Nagar</p>
+						<h3>560056</h3>
+						<p id="p3"></p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bx-package' ></i>
+					<span class="text">
+						
+						<p>RV Vidyaniketan</p>
+						<h3>560059</h3>
+						<p id="p4"></p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-package' ></i>
+					<span class="text">
+						
+						<p>Rajajinagar</p>
+						<h3>560010</h3>
+						<p id="p5"></p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Stock Data</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>User</th>
+								<th>Product stock</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="img/rr.jpg">
+									<p>RR Nagar</p>
+									
+								</td>
+								<td id="p6"></td>
+								<td><span class="status completed">Product 1</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/nay.jpg">
+									<p>Nayanda Halli</p>
+								</td>
+								<td id="p7"></td>
+								<td><span class="status pending">Product 2</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/bu.jpg">
+									<p>Bangalore University Janabarathi Nagar</p>
+								</td>
+								<td id="p8"></td>
+								<td><span class="status process">Product 3</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/rv.jpg">
+									<p>RV Vidyaniketan</p>
+								</td>
+								<td id="p9"></td>
+								<td><span class="status pending">Product 4</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="img/raj.jpeg">
+									<p>Rajajinagar</p>
+								</td>
+								<td id="p10"></td>
+								<td><span class="status completed">Product 5</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="todo">
+					<div class="head">
+						<h3>Order Status</h3>
+						<i class='bx bx-plus' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<ul class="todo-list">
+						<li class="completed">
+							<p>Last added</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+						<li class="completed">
+							<p>Last dispached</p>
+							<i class='bx bx-dots-vertical-rounded' ></i>
+						</li>
+				
+					</ul>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="script.js"></script>
+	<script src="firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+	<script src="firebase.js"></script>
+</body>
+</html>
